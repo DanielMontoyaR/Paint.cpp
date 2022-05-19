@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>876</width>
+    <height>466</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>876</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="actionAdd_file"/>
+    <addaction name="actionAbrir"/>
+    <addaction name="actionGuardar"/>
+    <addaction name="actionGuardar_como"/>
+   </widget>
+   <widget class="QMenu" name="menuCanvas">
+    <property name="title">
+     <string>Canvas</string>
+    </property>
+    <addaction name="actionSeleccionar_Tamano"/>
+    <addaction name="actionAcercar"/>
+    <addaction name="actionAlejar"/>
+   </widget>
+   <widget class="QMenu" name="menuTrazo">
+    <property name="title">
+     <string>Trazo</string>
+    </property>
+    <addaction name="actionLapiz"/>
+    <addaction name="actionLapicero"/>
+    <addaction name="actionBorrador"/>
+    <addaction name="actionFormas"/>
+    <addaction name="actionRellenar"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuCanvas"/>
+   <addaction name="menuTrazo"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAdd_file">
+   <property name="text">
+    <string>Cerrar</string>
+   </property>
+  </action>
+  <action name="actionAbrir">
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+  </action>
+  <action name="actionGuardar">
+   <property name="text">
+    <string>Guardar</string>
+   </property>
+  </action>
+  <action name="actionGuardar_como">
+   <property name="text">
+    <string>Guardar como</string>
+   </property>
+  </action>
+  <action name="actionSeleccionar_Tamano">
+   <property name="text">
+    <string>Seleccionar Tamaño</string>
+   </property>
+  </action>
+  <action name="actionAcercar">
+   <property name="text">
+    <string>Acercar </string>
+   </property>
+  </action>
+  <action name="actionAlejar">
+   <property name="text">
+    <string>Alejar </string>
+   </property>
+  </action>
+  <action name="actionLapiz">
+   <property name="text">
+    <string>Lapiz</string>
+   </property>
+  </action>
+  <action name="actionLapicero">
+   <property name="text">
+    <string>Lapicero</string>
+   </property>
+  </action>
+  <action name="actionBorrador">
+   <property name="text">
+    <string>Borrador</string>
+   </property>
+  </action>
+  <action name="actionFormas">
+   <property name="text">
+    <string>Formas</string>
+   </property>
+  </action>
+  <action name="actionRellenar">
+   <property name="text">
+    <string>Rellenar</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
