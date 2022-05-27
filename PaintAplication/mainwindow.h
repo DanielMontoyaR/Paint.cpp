@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <iostream>
+#include <queue>
+#include <iomanip>
+
+using namespace std;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,6 +30,8 @@ protected:
     void mouseReleaseEvent(QMouseEvent *e) override;
 
 private slots:
+
+    //Creación de funciones llamadas al seleccionarlas en la interfaz
     void on_actionAdd_file_triggered();
 
     void on_actionAbrir_triggered();
@@ -49,9 +56,17 @@ private slots:
 
     void on_actionRellenar_triggered();
 
-    void editarTrazo();
+    void on_actionColorPicker_triggered();
 
-    void trazaLinea(int x1,int y1,int x2,int y2);
+    //Creación de funciones para las distintas características de trazado.
+
+    void editarTrazo();//Solicita al usuario ingresar el color y tamaño del trazo a utilizar
+
+    void trazaLinea(int x1,int y1,int x2,int y2);//Función par trazar la línea recta
+
+    void floodfill(int x, int y, QColor new_color);
+
+
 
 private:
     Ui::MainWindow *ui;//Interfaz de usuario.

@@ -35,6 +35,7 @@ public:
     QAction *actionBorrador;
     QAction *actionFormas;
     QAction *actionRellenar;
+    QAction *actionColorPicker;
     QWidget *centralwidget;
     QMenuBar *menubar;
     QMenu *menuFile;
@@ -72,6 +73,8 @@ public:
         actionFormas->setObjectName(QString::fromUtf8("actionFormas"));
         actionRellenar = new QAction(MainWindow);
         actionRellenar->setObjectName(QString::fromUtf8("actionRellenar"));
+        actionColorPicker = new QAction(MainWindow);
+        actionColorPicker->setObjectName(QString::fromUtf8("actionColorPicker"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         MainWindow->setCentralWidget(centralwidget);
@@ -104,6 +107,7 @@ public:
         menuTrazo->addAction(actionBorrador);
         menuTrazo->addAction(actionFormas);
         menuTrazo->addAction(actionRellenar);
+        menuTrazo->addAction(actionColorPicker);
 
         retranslateUi(MainWindow);
 
@@ -125,6 +129,7 @@ public:
         actionBorrador->setText(QCoreApplication::translate("MainWindow", "Borrador", nullptr));
         actionFormas->setText(QCoreApplication::translate("MainWindow", "Formas", nullptr));
         actionRellenar->setText(QCoreApplication::translate("MainWindow", "Rellenar", nullptr));
+        actionColorPicker->setText(QCoreApplication::translate("MainWindow", "ColorPicker", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "Archivo", nullptr));
         menuCanvas->setTitle(QCoreApplication::translate("MainWindow", "Canvas", nullptr));
         menuTrazo->setTitle(QCoreApplication::translate("MainWindow", "Trazo", nullptr));
