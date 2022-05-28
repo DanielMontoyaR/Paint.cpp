@@ -36,6 +36,8 @@ public:
     QAction *actionFormas;
     QAction *actionRellenar;
     QAction *actionColorPicker;
+    QAction *actionAlicarFIltro;
+    QAction *actionRotarCanvas;
     QWidget *centralwidget;
     QMenuBar *menubar;
     QMenu *menuFile;
@@ -75,6 +77,10 @@ public:
         actionRellenar->setObjectName(QString::fromUtf8("actionRellenar"));
         actionColorPicker = new QAction(MainWindow);
         actionColorPicker->setObjectName(QString::fromUtf8("actionColorPicker"));
+        actionAlicarFIltro = new QAction(MainWindow);
+        actionAlicarFIltro->setObjectName(QString::fromUtf8("actionAlicarFIltro"));
+        actionRotarCanvas = new QAction(MainWindow);
+        actionRotarCanvas->setObjectName(QString::fromUtf8("actionRotarCanvas"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         MainWindow->setCentralWidget(centralwidget);
@@ -97,11 +103,12 @@ public:
         menubar->addAction(menuTrazo->menuAction());
         menuFile->addAction(actionAdd_file);
         menuFile->addAction(actionAbrir);
-        menuFile->addAction(actionGuardar);
         menuFile->addAction(actionGuardar_como);
         menuCanvas->addAction(actionSeleccionar_Tamano);
         menuCanvas->addAction(actionAcercar);
         menuCanvas->addAction(actionAlejar);
+        menuCanvas->addAction(actionAlicarFIltro);
+        menuCanvas->addAction(actionRotarCanvas);
         menuTrazo->addAction(actionLapiz);
         menuTrazo->addAction(actionLapicero);
         menuTrazo->addAction(actionBorrador);
@@ -130,6 +137,8 @@ public:
         actionFormas->setText(QCoreApplication::translate("MainWindow", "Formas", nullptr));
         actionRellenar->setText(QCoreApplication::translate("MainWindow", "Rellenar", nullptr));
         actionColorPicker->setText(QCoreApplication::translate("MainWindow", "ColorPicker", nullptr));
+        actionAlicarFIltro->setText(QCoreApplication::translate("MainWindow", "AplicarFIltro", nullptr));
+        actionRotarCanvas->setText(QCoreApplication::translate("MainWindow", "RotarCanvas", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "Archivo", nullptr));
         menuCanvas->setTitle(QCoreApplication::translate("MainWindow", "Canvas", nullptr));
         menuTrazo->setTitle(QCoreApplication::translate("MainWindow", "Trazo", nullptr));

@@ -3,8 +3,7 @@
 
 #include <QMainWindow>
 #include <iostream>
-#include <queue>
-#include <iomanip>
+#include <QList>
 
 using namespace std;
 
@@ -28,6 +27,7 @@ protected:
     void mousePressEvent(QMouseEvent *e) override;
     void mouseMoveEvent(QMouseEvent *e) override;
     void mouseReleaseEvent(QMouseEvent *e) override;
+    //void closeEvent(QCloseEvent *e)override;
 
 private slots:
 
@@ -35,8 +35,6 @@ private slots:
     void on_actionAdd_file_triggered();
 
     void on_actionAbrir_triggered();
-
-    void on_actionGuardar_triggered();
 
     void on_actionGuardar_como_triggered();
 
@@ -58,6 +56,7 @@ private slots:
 
     void on_actionColorPicker_triggered();
 
+
     //Creación de funciones para las distintas características de trazado.
 
     void editarTrazo();//Solicita al usuario ingresar el color y tamaño del trazo a utilizar
@@ -68,11 +67,21 @@ private slots:
 
 
 
+    //Creación de funciones asociadas al manejo de imágenes
+
+    void Filtro(int filterType);
+
+
+
+    void on_actionAlicarFIltro_triggered();
+
+    void on_actionRotarCanvas_triggered();
+
 private:
+
     Ui::MainWindow *ui;//Interfaz de usuario.
     QPainter *mPainter; //Pincel
     QImage *mImage; //Imagen
-    QImage *mImage2;//Imagen importada
     QPoint mClick;//Coordenada de click
     QPoint mBegin;// Coordena de click primaria
     QPoint mEnd; //Coordenada de click secundaria
@@ -88,6 +97,7 @@ private:
     int forma;//Tipo de forma a implementar en el canvas.
     int lado1;//Lado del rectángulo, cuadrado y base del triángulo.
     int lado2;//Lado del rectángulo, cuadrado y alto del triángulo.
+
 
 
 

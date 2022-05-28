@@ -32,7 +32,6 @@
     </property>
     <addaction name="actionAdd_file"/>
     <addaction name="actionAbrir"/>
-    <addaction name="actionGuardar"/>
     <addaction name="actionGuardar_como"/>
    </widget>
    <widget class="QMenu" name="menuCanvas">
@@ -42,6 +41,8 @@
     <addaction name="actionSeleccionar_Tamano"/>
     <addaction name="actionAcercar"/>
     <addaction name="actionAlejar"/>
+    <addaction name="actionAlicarFIltro"/>
+    <addaction name="actionRotarCanvas"/>
    </widget>
    <widget class="QMenu" name="menuTrazo">
     <property name="title">
@@ -122,6 +123,16 @@
   <action name="actionColorPicker">
    <property name="text">
     <string>ColorPicker</string>
+   </property>
+  </action>
+  <action name="actionAlicarFIltro">
+   <property name="text">
+    <string>AplicarFIltro</string>
+   </property>
+  </action>
+  <action name="actionRotarCanvas">
+   <property name="text">
+    <string>RotarCanvas</string>
    </property>
   </action>
  </widget>
